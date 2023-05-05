@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox
+  namespace: argocd-elastic
+spec:
+  containers:
+  - image: busybox
+    command:
+      - sleep
+      - "infinity"
+    imagePullPolicy: IfNotPresent
+    name: busybox
+  restartPolicy: Always
